@@ -1,24 +1,217 @@
 :root {
-    --font-sans-serif: "Montserrat", sans-serif;
-    --black: #000;
-    --white: #fff;
+  --font-sans-serif: "Montserrat", sans-serif;
+  --black: #000;
+  --white: #fff;
+  --gray-light: #e0e2e6;
 }
 
 .montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-    font-family: var(--font-sans-serif);
+  font-family: var(--font-sans-serif);
+}
+
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.homepage__container {
+  width: 100%;
+  margin: 40px 40px 0 40px;
+  border: 2px solid red;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px 600px 1fr;
+  grid-template-rows: 250px 250px 300px;
+  grid-auto-rows: 300px;
+}
+
+.logo {
+  width: 400px;
+  height:auto;
+}
+
+/* components */
+
+.components {
+  width: 100%;
+  background-color: var(--gray-light);
+}
+
+.logo {
+
+  width: 150px;
+  padding: 40px 0 10px 0;
+  margin-left: 20px;
+  border-bottom: 1px solid black;
+}
+
+.hero__container {
+  width: 650px;
+  height: 905px;
+  position: relative;
+  text-align: center;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: .75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: normal;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  .hero__title--name {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 1px solid black;
+    padding-top: 15px;
+  }
+
+  .hero__title--learn {
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* placeholders */
+
+.placeholder-1__nav-bar {
+  background-color: var(--gray-light);
+  grid-row: 1 / -1;
+}
+
+.placeholder-2__hero {
+  background-color:  var(--gray-light);
+  grid-column-start: 2;
+  grid-row: span 3;
+}
+
+.placeholder-3__performance {
+  background-color:  var(--gray-light);
+  grid-column-start: 3;
+  grid-row: span 2;
+}
+
+.placeholder-4__mpls-sculpture-garden {
+  background-color:  var(--gray-light);
+  grid-column-start: 2;
+  grid-row: span 2;
+}
+
+.placeholder-5__performing-arts {
+  background-color:  var(--gray-light);
+  grid-column-start: 3;
+}
+
+
+/* carousel */
+.carousel__container {
+  max-width: 600px;
+  display: grid;
+  grid-template-rows: 40px 210px;
+  border-bottom: 6px solid var(--gray-light);
+}
+
+/* carousel__title-row */
+.carousel__title-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel__title {
+  text-transform: uppercase;
+  font-size: .75em;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.fa-arrow-left {
+  color: var(--gray);
+  padding: 15px 10px 0 10px;
+}
+
+.fa-arrow-right {
+  color: var(--black);
+  padding: 15px 10px 0 10px;
+  justify-content: flex-end;
+}
+
+/* carousel__selections-container */
+.carousel__selections-container {
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+.carousel__selection-row {
+  margin: 0 100px;
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 100px;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.carousel__selection {
+  align-items: center;
+  padding: 0;
+}
+
+.carousel__selection-caption {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .75em;
+  font-weight: lighter;
+  border: none;
+  color: var(--gray);
+  text-align: center;
+}
+
+.carousel__selection-img {
+  width: 290px;
+  max-height: auto;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
