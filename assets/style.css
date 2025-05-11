@@ -70,6 +70,26 @@ a {
   border-bottom: 1px solid black;
 }
 
+.search__container {
+  width: 175px;
+  display: flex;  
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px 100px 12px 2px;
+  margin: 20px 0 20px 10px;
+}
+
+.search {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.search__icon {
+  padding-left: 0;
+}
+
 .hero__container {
   width: 650px;
   height: 905px;
