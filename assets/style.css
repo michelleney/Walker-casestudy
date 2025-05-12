@@ -43,16 +43,16 @@ a {
 
 .homepage__container {
   width: 100%;
-  margin: 40px 40px 0 20px;
+  margin: 20px 40px 0 20px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 220px 600px 1fr;
   grid-template-rows: 250px 250px 300px;
-  grid-auto-rows: 300px;
+  grid-auto-rows: 190px;
 }
 
 .logo {
-  width: 400px;
+  max-width: 200px;
   height:auto;
 }
 
@@ -68,11 +68,14 @@ a {
 .nav-bar__container {
   background-color: var(--white);
   grid-row: 1 / -1;
-
+  position: fixed;
+  top: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
-  width: 100%;
+  width: 220px;
   padding: 20px 20px 20px 20px;
   margin-left: 0;
   margin-top: 0;
@@ -86,7 +89,7 @@ a {
   font-weight: 400;
   line-height: .75rem;
   border-bottom: 1px solid black;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 
@@ -214,23 +217,56 @@ a {
   .free-thursday__container {
     grid-column-start: 3;
     grid-row: span 2;
+    max-width: 600px;
+    border-bottom: 6px solid var(--gray-light);
   }
 
-/* placeholders */
+  .free-thursday__image {
+    object-fit: cover;
+  }
 
-.placeholder-4__mpls-sculpture-garden {
-  background-color:  var(--gray-light);
-  grid-column-start: 2;
-  grid-row: span 2;
-}
+  .free-thursday__title-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.placeholder-5__performing-arts {
-  background-color:  var(--gray-light);
-  grid-column-start: 3;
-}
+  .title__date {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    padding: 0 5px;
+    margin-top: 10px;
+  }
+
+  .free-thursday__title--name {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 0 5px;
+    margin-top: 10px;
+  }
+
+  .free-thursday__title--details {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+
 
 /* carousel */
 .carousel__container {
+  grid-column-start: 3;
+  grid-row: span 1;
   max-width: 600px;
   display: grid;
   grid-template-rows: 40px 210px;
@@ -241,13 +277,20 @@ a {
 .carousel__title-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .carousel__title {
   text-transform: uppercase;
+  text-align: center;
   font-size: .75em;
   padding: 0px 5px;
+  width:max-content;
   border: 1px solid black;
+}
+
+.carousel__arrows--container {
+  justify-content: right;
 }
 
 .fa-arrow-left {
@@ -258,7 +301,7 @@ a {
 .fa-arrow-right {
   color: var(--black);
   padding: 15px 10px 0 10px;
-  justify-content: flex-end;
+  justify-content: right;
 }
 
 /* carousel__selections-container */
@@ -300,5 +343,96 @@ a {
   max-height: auto;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+
+/* placeholders */
+
+.amenities__container {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: span 3;
+  display: flex;
+  border-bottom: 6px solid var(--gray-light);
+  max-width: 1200px;
+}
+
+.sculpture-garden__container {
+  margin-right: 20px;
+}
+
+.shop__container {
+ 
+}
+
+.amenities__image {
+  max-width: 600px;
+}
+
+.amenities__summary {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.amenities__title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.amenities__title--details {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* footer */
+
+.footer__container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.footer__nav-bar-1 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 120px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.footer__nav-bar-1--links {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  margin-bottom: 0;
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 220px;
+}
+
+.footer__container-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.footer__icon {
+  padding-top: 10px;
+}
+
+.footer__social-media {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 400px;
 }
 
