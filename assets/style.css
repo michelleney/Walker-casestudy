@@ -167,8 +167,8 @@ a {
   background-color:  var(--white);
   grid-column-start: 2;
   grid-row: span 3;
-  width: 600px;
-  height: 905px;
+  width: 100%;
+  height: auto;
   position: relative;
   text-align: center;
 }
@@ -178,18 +178,20 @@ a {
   font-size: .75em;
   text-transform: uppercase;
   text-decoration: none;
+  padding-bottom: 10px;
   font-weight: normal;
   position: absolute;
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  }
 
   .hero__title--name {
     text-align: center;
     font-size: 1.5em;
-    font-weight: normal;
+    font-weight: bold;
     position: absolute;
+    font-style: italic;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -202,22 +204,19 @@ a {
     font-size: 1em;
     font-weight: normal;
     position: absolute;
-    top: 96%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
+/* free-first thursday */
 
+  .free-thursday__container {
+    grid-column-start: 3;
+    grid-row: span 2;
+  }
 
 /* placeholders */
-
-
-
-.placeholder-3__performance {
-  background-color:  var(--gray-light);
-  grid-column-start: 3;
-  grid-row: span 2;
-}
 
 .placeholder-4__mpls-sculpture-garden {
   background-color:  var(--gray-light);
@@ -229,7 +228,6 @@ a {
   background-color:  var(--gray-light);
   grid-column-start: 3;
 }
-
 
 /* carousel */
 .carousel__container {
